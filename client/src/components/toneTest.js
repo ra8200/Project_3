@@ -1,7 +1,14 @@
-import * as Tone from 'tone';
+import React from 'react';
+import { Tone } from 'tone';
 
 const synth = new Tone.Synth().toDestination();
 const now = Tone.now();
 
-synth.triggerAttack('C#4', now);
-synth.triggerRelease(now + 1);
+let banana = () => {
+	console.log('doot');
+	synth.triggerAttack('C#4', now);
+	synth.triggerRelease(now + 1);
+}
+
+document.getElementById('toneTestButton').addEventListener('click', banana());
+
