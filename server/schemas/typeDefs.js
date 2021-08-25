@@ -13,15 +13,15 @@ const typeDefs = gql`
     id: ID
     name: String
     image: String
-    length: Number
-    counting: Number
+    length: Int
+    counting: Int
   }
   input RhythmsInput {
     id: ID
     name: String
     image: String
-    length: Number
-    counting: Number
+    length: Int
+    counting: Int
   }
   type Auth {
     token: ID!
