@@ -1,3 +1,16 @@
+@import url("https://unpkg.com/@tailwindcss/typography@0.4.x/dist/typography.min.css");
+@import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+
+.styleMe {
+  font-family: "Exo";
+  font-weight: 700;
+}
+
+.home-name {
+  font-size: 150px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
