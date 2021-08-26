@@ -14,7 +14,7 @@ export default function NavBar () {
                     >
                        RhythmR     
                     </NavLink>
-                    <NavLink to="/project"
+                    <NavLink to="/"
                     className="inline-flex items-center py-3 px-3 my-6 rounded text-white hover:text-black"
                     activeClassName="bg-blue-800"
                     >
