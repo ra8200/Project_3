@@ -19,11 +19,11 @@ class AuthService {
     }
   }
   getToken() {
-    localStorage.setItem("id_token", idToken);
-    window.location.assign("/");
+    return localStorage.getItem("id_token");
   }
   loginUser(idToken) {
-    localStorage.setItem("id_token");
+    localStorage.setItem("id_token", idToken);
+
     window.location.assign("/");
   }
   logout() {
