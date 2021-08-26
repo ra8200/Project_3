@@ -7,18 +7,18 @@ const typeDefs = gql`
     _id: ID!
     username: String
     email: String
-    password:String
+    password: String
     saveRhythms: [Rhythms]
   }
   type Rhythms {
-    id: ID
+    rhythmid: ID
     name: String
     image: String
     length: Int
     counting: Int
   }
   input RhythmsInput {
-    id: ID
+    rhythmid: ID
     name: String
     image: String
     length: Int
