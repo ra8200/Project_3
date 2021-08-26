@@ -10,7 +10,7 @@ const rhythmInput = [];
 
 const counting = () => {
 	const timeSignatureNumerator = 4;
-	
+
 }
 
 document.querySelectorAll('.rhythmButtons').addEventListener('click', )
