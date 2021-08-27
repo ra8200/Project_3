@@ -1,4 +1,6 @@
 import React from "react";
+import Buttons from "./buttons";
+import Staff from "./staff";
 // import image from "../background.jpg";
 
 export default function Home() {
@@ -13,6 +15,12 @@ export default function Home() {
         <h1 className="text-6xl text-blue-500 font-bold styleMe leading-none lg:leading-snug home-name">
           RhythmR
         </h1>
+      </section>
+      <section>
+        <Staff />
+      </section>
+      <section>
+        <Buttons />
       </section>
     </main>
   );
