@@ -10,16 +10,23 @@ export default function NavBar() {
             to="/"
             exact
             activeClassName="text-white"
-            className="inline-flex items center py-6 px-3 mr-4 text-white text-4xl font-bold styleMe tracking-widest"
+            className="inline-flex items center py-6 px-3 mr-4 text-black text-4xl font-bold styleMe tracking-widest"
           >
             RhythmR
           </NavLink>
           <NavLink
             to="/login"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-white hover:text-black"
+            className="inline-flex items-center py-3 px-3 my-6 rounded text-black hover:text-black"
             activeClassName="bg-blue-800"
           >
-            Login/Sign-Up
+            Login
+          </NavLink>
+          <NavLink
+            to="/signup"
+            className="inline-flex items-center py-3 px-3 my-6 rounded text-black hover:text-black"
+            activeClassName="bg-blue-800"
+          >
+            Sign Up
           </NavLink>
         </nav>
       </div>
