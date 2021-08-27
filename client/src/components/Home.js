@@ -1,11 +1,7 @@
 import React from "react";
 import image from "../rhythmrBg.jpg";
-import Staff from "./staff";
+// import Staff from "./staff";
 import Toolbox from "./toolbox";
-<<<<<<< HEAD
-// import image from "../background.jpg";
-=======
->>>>>>> b77c2b0c708bdc7268496d9875a1731e8798c6e2
 
 export default function Home() {
   return (
@@ -20,9 +16,7 @@ export default function Home() {
           RhythmR
         </h1>
       </section>
-      <section>
-        <Staff />
-      </section>
+      <section>{/* <Staff /> */}</section>
       <section>
         <Toolbox />
       </section>
