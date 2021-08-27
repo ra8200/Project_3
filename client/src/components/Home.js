@@ -1,5 +1,4 @@
 import React from "react";
-import image from "../background.jpg";
 
 export default function Home() {
   return (

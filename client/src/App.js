@@ -13,10 +13,9 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-
 const httpLink = createHttpLink({ uri: "/graphql" });
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem("ide_token");
+  const token = localStorage.getItem("id_token");
   return {
     headers: {
       ...headers,
@@ -28,29 +27,21 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-
 function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
         <NavBar />
+        <Switch>
+          <Route component={Home} path="/" exact />
+          <Route component={About} path="/about" />
+          <Route component={LoginForm} path="/login" />
+          <Route component={SignUp} path="/signup" />
+          <Route component={ProfileScreen} path="/profile" />
+        </Switch>
       </Router>
     </ApolloProvider>
   );
 }
-
-function App() {
-  return (
-    <BrowserRouter>
-      <NavBar />
-      <Switch>
-        <Route component={Home} path="/" exact />
-        <Route component={About} path="/about" />
-        <Route component={LoginForm} path="/login" />
-        <Route component={SignUp} path="/signup" />
-        <Route component={ProfileScreen} path="/profile" />
-      </Switch>
-    </BrowserRouter>
-  )
 
 export default App;
