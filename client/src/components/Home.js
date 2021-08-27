@@ -1,8 +1,7 @@
 import React from "react";
 import image from "../rhythmrBg.jpg";
-import Buttons from "./buttons";
 import Staff from "./staff";
-// import image from "../background.jpg";
+import Toolbox from "./toolbox";
 
 export default function Home() {
   return (
@@ -21,7 +20,7 @@ export default function Home() {
         <Staff />
       </section>
       <section>
-        <Buttons />
+        <Toolbox />
       </section>
     </main>
   );
