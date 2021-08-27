@@ -1,11 +1,8 @@
 import React from "react";
-<<<<<<< HEAD
 import image from "../rhythmrBg.jpg";
-=======
-import Buttons from "./buttons";
 import Staff from "./staff";
+import Toolbox from "./toolbox";
 // import image from "../background.jpg";
->>>>>>> 123305fa89a9a3d9c42d284b0b28cfd4a35b1cf5
 
 export default function Home() {
   return (
@@ -24,7 +21,7 @@ export default function Home() {
         <Staff />
       </section>
       <section>
-        <Buttons />
+        <Toolbox />
       </section>
     </main>
   );
