@@ -1,9 +1,9 @@
 import React from "react";
 import Home from "./components/Home";
-import About from "./components/About";
+// import About from "./components/About";
 import LoginForm from "./components/LoginForm";
 import SignUp from "./components/SignUp";
-import ProfileScreen from "./components/ProfileScreen";
+// import ProfileScreen from "./components/ProfileScreen";
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {
@@ -34,10 +34,10 @@ function App() {
         <NavBar />
         <Switch>
           <Route component={Home} path="/" exact />
-          <Route component={About} path="/about" />
+          {/* <Route component={About} path="/about" /> */}
           <Route component={LoginForm} path="/login" />
           <Route component={SignUp} path="/signup" />
-          <Route component={ProfileScreen} path="/profile" />
+          {/* <Route component={ProfileScreen} path="/profile" /> */}
         </Switch>
       </Router>
     </ApolloProvider>
