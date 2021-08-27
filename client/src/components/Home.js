@@ -15,10 +15,9 @@ export default function Home() {
         <h1 className="text-6xl text-white font-bold styleMe leading-none lg:leading-snug home-name">
           RhythmR
         </h1>
-      </section>
-      <section>{/* <Staff /> */}</section>
-      <section>
-        <Toolbox />
+        <div>
+          <Toolbox />
+        </div>
       </section>
     </main>
   );
