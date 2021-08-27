@@ -1,6 +1,6 @@
 import React from "react";
 import image from "../rhythmrBg.jpg";
-import Staff from "./staff";
+// import Staff from "./staff";
 import Toolbox from "./toolbox";
 
 export default function Home() {
@@ -15,12 +15,9 @@ export default function Home() {
         <h1 className="text-6xl text-blue-500 font-bold styleMe leading-none lg:leading-snug home-name">
           RhythmR
         </h1>
-      </section>
-      <section>
-        <Staff />
-      </section>
-      <section>
-        <Toolbox />
+        <div>
+          <Toolbox />
+        </div>
       </section>
     </main>
   );
