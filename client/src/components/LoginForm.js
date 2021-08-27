@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Input from "@material-tailwind/react/Input";
-
+import { useMutation } from "@apollo/client";
 import { loginUser } from "../utils/API";
+import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 
 const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
-  const [validated] = useState(false);
-  const [showAlert, setShowAlert] = useState(false);
+  const [login] = useMutation(LOGIN_USER);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -17,25 +17,12 @@ const LoginForm = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-
     try {
-      const response = await loginUser(userFormData);
+      const { data } = await login({ variables: { ...userFormData } });
 
-      if (!response.ok) {
-        throw new Error("something went wrong!");
-      }
-
-      const { token, user } = await response.json();
-      console.log(user);
-      Auth.login(token);
+      Auth.login(data.login.token);
     } catch (err) {
       console.error(err);
-      setShowAlert(true);
     }
 
     setUserFormData({
@@ -45,7 +32,38 @@ const LoginForm = () => {
     });
   };
 
-  return;
+  return (
+    <main>
+      <h1>Login</h1>
+      <div>
+        <form onSubmit={handleFormSubmit}>
+          <input
+            className="form-input"
+            placeholder="email"
+            name="email"
+            type="email"
+            value={userFormData.email}
+            onChange={handleInputChange}
+          />
+          <input
+            className="form-input"
+            placeholder="password"
+            name="password"
+            type="password"
+            value={userFormData.password}
+            onChange={handleInputChange}
+          />
+          <button
+            className="btn btn-block btn-primary"
+            style={{ cursor: "pointer" }}
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </main>
+  );
 };
 
 export default LoginForm;
