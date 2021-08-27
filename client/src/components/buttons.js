@@ -6,14 +6,14 @@ class Buttons extends Component {
       <div class="buttonBox">
         <div class="buttons">
           Buttons here:
-          <button>Whole Note</button>
-          <button>Whole Rest</button>
-          <button>Half Note</button>
-          <button>Half Rest</button>
-          <button>Quarter Note</button>
-          <button>Quarter Rest</button>
-          <button>Eighth Note</button>
-          <button>Eighth Rest</button>
+          <button>&#119133;</button>
+          <button>&#119099;</button>
+          <button>&#119134;</button>
+          <button>&#119100;</button>
+          <button>&#119135;</button>
+          <button>&#119101;</button>
+          <button>&#119136;</button>
+          <button>&#119102;</button>
         </div>
       </div>
     );
