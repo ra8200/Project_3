@@ -40,7 +40,7 @@ const SignUp = () => {
           placeholder="username"
           name="username"
           type="text"
-          value={userFormData.email}
+          value={userFormData.username}
           onChange={handleInputChange}
         />
         <input

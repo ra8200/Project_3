@@ -6,11 +6,11 @@ import Toolbox from "./toolbox";
 export default function Home() {
   return (
     <main>
-      <img
+      {/* <img
         src={image}
         alt="Home"
         className="absolute object-cover w-full h-full"
-      />
+      /> */}
       <section className="relative flex justify-center min-h-screen pt-12 lg:64 px-8">
         <h1 className="text-6xl text-blue-500 font-bold styleMe leading-none lg:leading-snug home-name">
           RhythmR
