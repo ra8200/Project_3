@@ -2,7 +2,6 @@ import React from "react";
 import image from "../rhythmrBg.jpg";
 import Staff from "./staff";
 import Toolbox from "./toolbox";
-// import image from "../background.jpg";
 
 export default function Home() {
   return (
