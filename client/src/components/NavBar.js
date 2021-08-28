@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import Auth from "../utils/auth";
+
 export default function NavBar() {
   return (
     <header className="bg-green-600">
@@ -22,7 +23,7 @@ export default function NavBar() {
             <NavLink
               to="/login"
               className="inline-flex items-center py-3 px-3 my-6 rounded text-black hover:text-black"
-              activeClassName="bg-blue-800"
+              activeClassName="bg-green-800"
             >
               Login
             </NavLink>
