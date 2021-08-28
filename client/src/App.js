@@ -3,6 +3,7 @@ import Home from "./components/Home";
 // import About from "./components/About";
 import LoginForm from "./components/LoginForm";
 import SignUp from "./components/SignUp";
+import NotesList from "./components/NotesList";
 // import ProfileScreen from "./components/ProfileScreen";
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -37,7 +38,7 @@ function App() {
           {/* <Route component={About} path="/about" /> */}
           <Route component={LoginForm} path="/login" />
           <Route component={SignUp} path="/signup" />
-          {/* <Route component={ProfileScreen} path="/profile" /> */}
+          <Route component={NotesList} path="/notes" />
         </Switch>
       </Router>
     </ApolloProvider>

@@ -35,6 +35,13 @@ export default function NavBar() {
           >
             Sign Up
           </NavLink>
+          <NavLink
+            to="/notes"
+            className="inline-flex items-center py-3 px-3 my-6 rounded text-black hover:text-black"
+            activeClassName="bg-blue-800"
+          >
+            Notes
+          </NavLink>
         </nav>
       </div>
     </header>

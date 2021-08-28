@@ -1,11 +1,18 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User } = require("../models");
+const { User, Notes } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
     me: async (parent, variables, context) => {
-      return User.findById(context.user._id).populate("saveRhythms");
+      return User.findOne(context.user._id).populate("notes");
+    },
+    notes: async (parent, { username }) => {
+      const params = username ? { username } : {};
+      return Notes.find(params).sort({ createdAt: -1 });
+    },
+    note: async (parent, { notesId }) => {
+      return Notes.findOne({ _id: notesId });
     },
   },
   Mutation: {
@@ -26,12 +33,23 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    saveRhythms: async (parent, { input }, context) => {
-      return User.findByIdAndUpdate(
-        { _id: context.user._id },
-        { $push: { saveRhythms: input } },
-        { new: true, runValidators: true }
+    addNotes: async (parent, { text }, context) => {
+      const note = await Notes.create({ text });
+      await User.findOneAndUpdate(
+        {
+          _id: context.user._id,
+        },
+        { $addToSet: { notes: note._id } }
       );
+      return note;
+    },
+    removeNotes: async (parent, { notesId }, context) => {
+      const note = await Notes.findOneAndDelete({ _id: notesId });
+      await User.findOneAndUpdate(
+        { _id: context.user._id },
+        { $pull: { notes: note._id } }
+      );
+      return note;
     },
   },
 };
