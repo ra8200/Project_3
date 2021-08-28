@@ -34,39 +34,45 @@ const LoginForm = () => {
   };
 
   return (
-    <body>
-      <main>
-        <div className="w-full h-screen md:-mx-4 background-image:url('../rhythmrBg.jpg')"></div>
-        <div className="flex justify-center -mt-10">
-          <form onSubmit={handleFormSubmit} className="mb-0 space-y-6">
+    <div className="flex flex-col p-2 h-screen">
+      <form onSubmit={handleFormSubmit} className="max-w-md m-auto">
+        <h1 className="text-5xl text-center">RhythmR</h1>
+        <p className="text-2xl text-center">Login to access the site!</p>
+        <div className="border p-5 my-5 rounded shadow-lg-blue">
+          <div>
+            <label className="block mb-2">Email</label>
             <input
-              className="form-input"
+              className="form-input border rounded py-2 px-3 w-full focus:outline-one focus:shadow-outline"
               placeholder="email"
               name="email"
               type="email"
               value={userFormData.email}
               onChange={handleInputChange}
-              className="w-fu"
             />
+          </div>
+          <div className="py-2">
+            <label className="block mb-2">Password</label>
             <input
-              className="form-input"
+              className="form-input border rounded py-2 px-3 w-full focus:outline-one focus:shadow-outline"
               placeholder="password"
               name="password"
               type="password"
               value={userFormData.password}
               onChange={handleInputChange}
             />
+          </div>
+          <div className="py-2">
             <button
-              className="btn btn-block btn-primary"
+              className="w-full rounded bg-green-600 hover:bg-green-800 font-bold py-2 px-4 border-solid border-2 border-green-700"
               style={{ cursor: "pointer" }}
               type="submit"
             >
               Submit
             </button>
-          </form>
+          </div>
         </div>
-      </main>
-    </body>
+      </form>
+    </div>
   );
 };
 
