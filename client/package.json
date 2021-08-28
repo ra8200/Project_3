@@ -9,10 +9,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-<<<<<<< HEAD
     "apollo-client": "^2.6.10",
-=======
->>>>>>> bc969cdc9686088c58e67e9f948ca7dcd9fbabf8
     "graphql": "^15.5.1",
     "jwt-decode": "^2.2.0",
     "react": "^17.0.2",
