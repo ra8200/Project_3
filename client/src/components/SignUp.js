@@ -32,40 +32,54 @@ const SignUp = () => {
     });
   };
   return (
-    <div>
-      <h2>Sign Up</h2>
-      <form onSubmit={handleFormSubmit}>
-        <input
-          className="form-input"
-          placeholder="username"
-          name="username"
-          type="text"
-          value={userFormData.email}
-          onChange={handleInputChange}
-        />
-        <input
-          className="form-input"
-          placeholder="email"
-          name="email"
-          type="text"
-          value={userFormData.email}
-          onChange={handleInputChange}
-        />
-        <input
-          className="form-input"
-          placeholder="password"
-          name="password"
-          type="text"
-          value={userFormData.password}
-          onChange={handleInputChange}
-        />
-        <button
-          className="btn btn-block btn-primary"
-          style={{ cursor: "pointer" }}
-          type="submit"
-        >
-          Submit
-        </button>
+    <div className="flex flex-col p-2 h-screen">
+      <form onSubmit={handleFormSubmit} className="max-w-md m-auto">
+        <h1 className="text-5xl text-center">RhythmR</h1>
+        <p className="text-2xl text-center">Sign Up to access the site!</p>
+        <div className="border p-5 my-5 rounded shadow-lg-blue">
+          <div>
+            <label className="block mb-2">Username</label>
+            <input
+              className="form-input border rounded py-2 px-3 w-full focus:outline-one focus:shadow-outline"
+              placeholder="username"
+              name="username"
+              type="text"
+              value={userFormData.username}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div>
+            <label className="block mb-2">Email</label>
+            <input
+              className="form-input border rounded py-2 px-3 w-full focus:outline-one focus:shadow-outline"
+              placeholder="email"
+              name="email"
+              type="text"
+              value={userFormData.email}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div>
+            <label className="block mb-2">Password</label>
+            <input
+              className="form-input border rounded py-2 px-3 w-full focus:outline-one focus:shadow-outline"
+              placeholder="password"
+              name="password"
+              type="text"
+              value={userFormData.password}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="py-2">
+            <button
+              className="w-full rounded bg-green-600 hover:bg-green-800 font-bold py-2 px-4 border-solid border-2 border-green-700"
+              style={{ cursor: "pointer" }}
+              type="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   );
