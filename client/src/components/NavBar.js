@@ -32,9 +32,16 @@ export default function NavBar() {
           <NavLink
             to="/signup"
             className="inline-flex items-center py-3 px-3 my-6 rounded text-black hover:text-black"
-            activeClassName="bg-blue-800"
+            activeClassName="bg-green-800"
           >
             Sign Up
+          </NavLink>
+          <NavLink
+            to="/tutoring"
+            className="inline-flex items-center py-3 px-3 my-6 rounded text-black hover:text-black"
+            activeClassName="bg-green-800"
+          >
+            Tutoring
           </NavLink>
         </nav>
       </div>
