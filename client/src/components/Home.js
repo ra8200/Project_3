@@ -1,7 +1,7 @@
 import React from "react";
 import image from "../rhythmrBg.jpg";
-// import Toolbox from "./toolbox";
 import Piano from "../components/Piano";
+import Toolbox from "./toolbox";
 
 export default function Home() {
   return (
@@ -19,6 +19,9 @@ export default function Home() {
         </div>
         <div>
           <Piano />
+        </div>
+        <div>
+          <Toolbox />
         </div>
       </section>
     </main>
