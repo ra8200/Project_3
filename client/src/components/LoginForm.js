@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Input from "@material-tailwind/react/Input";
 import { useMutation } from "@apollo/client";
 
 import { LOGIN_USER } from "../utils/mutations";
