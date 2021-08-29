@@ -24,20 +24,20 @@ export const ADD_USER = gql`
   }
 `;
 
-export const SAVE_RHYTHMS = gql`
-  mutation saveRhythms($input: RhythmsInput!) {
-    saveRhythms(input: $input) {
+export const ADD_NOTES = gql`
+  mutation addNotes($userId: ID!, $note: String!) {
+    addNotes(userId: $userID, note: $note) {
       _id
       username
-      email
-      password
-      saveRhythms {
-        rhythmid
-        name
-        image
-        length
-        counting
-      }
+      notes
     }
+  }
+`;
+export const REMOVE_NOTES = gql`
+  mutation removeNotes($note: String!) {
+    removeNotes(note: $note)
+    _id
+    username
+    notes
   }
 `;
