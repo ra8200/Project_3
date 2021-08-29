@@ -3,7 +3,7 @@ import Home from "./components/Home";
 // import About from "./components/About";
 import LoginForm from "./components/LoginForm";
 import SignUp from "./components/SignUp";
-// import ProfileScreen from "./components/ProfileScreen";
+import Tutoring from "./components/Tutoring";
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {
@@ -37,7 +37,7 @@ function App() {
           {/* <Route component={About} path="/about" /> */}
           <Route component={LoginForm} path="/login" />
           <Route component={SignUp} path="/signup" />
-          {/* <Route component={ProfileScreen} path="/profile" /> */}
+          <Route component={Tutoring} path="/tutoring" />
         </Switch>
       </Router>
     </ApolloProvider>
