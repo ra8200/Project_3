@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Input from "@material-tailwind/react/Input";
 import { useMutation } from "@apollo/client";
-import { loginUser } from "../utils/API";
+
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 import image from "../rhythmrBg.jpg";
