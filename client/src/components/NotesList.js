@@ -1,10 +1,9 @@
-import AddNote from "./AddNotes";
 import React from "react";
-import { QUERY_GET_ME, QUERY_NOTES } from "../utils/queries";
+import { QUERY_GET_ME } from "../utils/queries";
 import { useMutation } from "@apollo/client";
 import { REMOVE_NOTES } from "../utils/mutations";
 
-const NotesList = ({ notes }) => {
+const NotesList = ({ notes, isLoggedInUser = false }) => {
   const [removeNotes, { error }] = useMutation(REMOVE_NOTES, {
     update(cache, { data: { removeNotes } }) {
       try {
@@ -27,12 +26,14 @@ const NotesList = ({ notes }) => {
     }
   };
   return (
-    <div>
+    <div className="note-list">
       {notes &&
         notes.map((note) => (
           <div key={note}>
             <span>{note}</span>
-            <button onClick={() => handleRemoveNotes(note)}>X</button>
+            {isLoggedInUser && (
+              <button onClick={() => handleRemoveNotes(note)}>X</button>
+            )}
           </div>
         ))}
     </div>

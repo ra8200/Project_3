@@ -26,7 +26,7 @@ export const ADD_USER = gql`
 
 export const ADD_NOTES = gql`
   mutation addNotes($userId: ID!, $note: String!) {
-    addNotes(userId: $userId, note: $note) {
+    addNotes(userId: $userID, note: $note) {
       _id
       username
       notes

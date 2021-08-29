@@ -36,7 +36,7 @@ const SignUp = () => {
       <form onSubmit={handleFormSubmit} className="max-w-md m-auto">
         <h1 className="text-5xl text-center">RhythmR</h1>
         <p className="text-2xl text-center">Sign Up to access the site!</p>
-        <div className="border p-5 my-5 rounded shadow-lg-blue">
+        <div className="border p-5 my-5 rounded shadow-lg-green">
           <div>
             <label className="block mb-2">Username</label>
             <input

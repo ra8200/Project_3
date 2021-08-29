@@ -5,6 +5,7 @@ import LoginForm from "./components/LoginForm";
 import SignUp from "./components/SignUp";
 import Profile from "./components/Profile";
 // import ProfileScreen from "./components/ProfileScreen";
+import Tutoring from "./components/Tutoring";
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {
@@ -40,6 +41,7 @@ function App() {
           <Route component={LoginForm} path="/login" />
           <Route component={SignUp} path="/signup" />
           <Route component={Profile} path="/profile" />
+          <Route component={Tutoring} path="/tutoring" />
         </Switch>
       </Router>
     </ApolloProvider>
