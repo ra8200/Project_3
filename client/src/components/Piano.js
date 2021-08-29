@@ -65,7 +65,10 @@ class Piano extends Component {
         <div className="piano-title">Piano</div>
         <div className="piano">{keys}</div>
         <div>{audioFiles}</div>
-        <div className="piano-instructions">Use Z-M as white Keys</div>
+        <div className="piano-instructions">
+          <p>Use Z-M as White Keys</p>
+          <p>Use S,D,G,H, and J as Black Keys</p>
+        </div>
       </div>
     );
   }
