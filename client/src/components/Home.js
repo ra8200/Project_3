@@ -1,7 +1,7 @@
 import React from "react";
 import image from "../rhythmrBg.jpg";
-// import Toolbox from "./toolbox";
 import Piano from "../components/Piano";
+import Toolbox from "./toolbox";
 
 export default function Home() {
   return (
@@ -14,6 +14,9 @@ export default function Home() {
       <section className="relative flex justify-center min-h-screen pt-12 lg:64 px-8">
         <div>
           <Piano />
+        </div>
+        <div>
+          <Toolbox />
         </div>
       </section>
     </main>

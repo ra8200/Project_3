@@ -75,5 +75,15 @@
 }
 
 .piano-title {
-  position: relative;
+  color: white;
+  font-weight: 500;
+  font-size: 42px;
+}
+
+.piano-instructions {
+  color: white;
+}
+
+.toolbox {
+  /* padding: 20px; */
 }
