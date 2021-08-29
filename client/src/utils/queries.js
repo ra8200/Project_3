@@ -6,19 +6,31 @@ export const QUERY_GET_ME = gql`
       _id
       username
       email
-      password
-      saveNotes {
-        _id: ID
-        text: String
-      }
+
+      notes
     }
   }
 `;
-export const QUERY_NOTES = gql`
-  query getNotes {
-    notes {
-      _id: ID
-      text: String
+
+export const QUERY_USERS = gql`
+  query allUsers {
+    users {
+      _id
+      username
+      email
+
+      notes
+    }
+  }
+`;
+export const QUERY_SINGLE_USER = gql`
+  query singleUser($userId: ID!) {
+    user(userId: $userId) {
+      _id
+      username
+      email
+
+      notes
     }
   }
 `;

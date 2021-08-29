@@ -1,18 +1,21 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Notes } = require("../models");
+
+const { User } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    me: async (parent, variables, context) => {
-      return User.findOne(context.user._id).populate("notes");
+    me: async (parent, args, context) => {
+      if (context.user) {
+        return User.findOne({ _id: context.user._id });
+      }
+      throw new AuthenticationError("login please");
     },
-    notes: async (parent, { username }) => {
-      const params = username ? { username } : {};
-      return Notes.find(params).sort({ createdAt: -1 });
+    users: async () => {
+      return User.find();
     },
-    note: async (parent, { notesId }) => {
-      return Notes.findOne({ _id: notesId });
+    user: async (parent, { userId }) => {
+      return User.findOne({ _id: userId });
     },
   },
   Mutation: {
@@ -33,23 +36,27 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addNotes: async (parent, { text }, context) => {
-      const note = await Notes.create({ text });
-      await User.findOneAndUpdate(
-        {
-          _id: context.user._id,
-        },
-        { $addToSet: { notes: note._id } }
-      );
-      return note;
+    addNotes: async (parent, { userId, note }, context) => {
+      if (context.user) {
+        return User.findByOneAndUpdate(
+          { _id: userId },
+          {
+            $addToSet: { notes: note },
+          },
+          { new: true, runValidators: true }
+        );
+      }
+      throw new AuthenticationError("login please");
     },
-    removeNotes: async (parent, { notesId }, context) => {
-      const note = await Notes.findOneAndDelete({ _id: notesId });
-      await User.findOneAndUpdate(
-        { _id: context.user._id },
-        { $pull: { notes: note._id } }
-      );
-      return note;
+    removeNotes: async (parent, { note }, context) => {
+      if (context.user) {
+        return User.findByOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { notes: note } },
+          { new: true }
+        );
+      }
+      throw new AuthenticationError("login please");
     },
   },
 };

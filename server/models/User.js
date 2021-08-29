@@ -17,7 +17,12 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  saveNotes: [Notes],
+  notes: [
+    {
+      type: String,
+      trim: true,
+    },
+  ],
 });
 
 userSchema.pre("save", async function (next) {
