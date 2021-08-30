@@ -24,3 +24,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.note {
+  background-color: #fef68a;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+
+textarea {
+  background-color: #fef68a;
+  resize: none;
+  border: none;
+}
+textarea:focus {
+  outline: none;
+}

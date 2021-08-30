@@ -1,9 +1,26 @@
 import React from "react";
-import Piano from "../Piano";
-import * as Tone from "tone";
+import Piano2 from "../Piano2";
+import * as Tone from 'tone';
+import '../../App.css';
 
 const sine = new Tone.Oscillator(220, "sine").toMaster();
 const now = Tone.now();
+
+function play(note) {
+  const piano = new Tone.Sampler({
+    urls: {
+      C4: 'C4.mp3',
+      'D#4': 'Ds4.mp3',
+      'F#4': 'Fs4.mp3',
+      A4: 'A4.mp3',
+    },
+    release: 1,
+    baseUrl: 'https://tone.js.github.io/audio/salamander',
+  }).toDestination();
+  Tone.loaded().then(() => {
+    piano.triggerAttackRelease(`{note}`, 4);
+  }); 
+}
 
 export default function LessonOne() {
   return (
@@ -117,9 +134,10 @@ export default function LessonOne() {
         >
           Play a Quarter Note
         </button>
-      </div>
-      <div>
-        <Piano />
+        <br></br>
+        <p className="text-xl text-center">Click in the piano first to activate it!</p>
+				<br></br>
+        <Piano2 />
       </div>
     </div>
   );

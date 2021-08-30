@@ -1,5 +1,24 @@
 import React from "react";
-import Piano from "../Piano";
+import Piano2 from "../Piano2";
+import Mary from './Mary.JPG';
+import * as Tone from 'tone';
+import '../../App.css';
+
+function play(note) {
+  const piano = new Tone.Sampler({
+    urls: {
+      C4: 'C4.mp3',
+      'D#4': 'Ds4.mp3',
+      'F#4': 'Fs4.mp3',
+      A4: 'A4.mp3',
+    },
+    release: 1,
+    baseUrl: 'https://tone.js.github.io/audio/salamander',
+  }).toDestination();
+  Tone.loaded().then(() => {
+    piano.triggerAttackRelease(`{note}`, 4);
+  }); 
+}
 
 export default function LessonThree() {
   return (
@@ -50,11 +69,13 @@ export default function LessonThree() {
         <p className="text-xl text-center">
           Remember to tap your feet while you play, and try to count along with
           each rhythm.
-          <Piano />
         </p>
-      </div>
-      <div>
-        <image src="/Mary.JPG" />
+				<br></br>
+				<img className='h-auto w-full' src={Mary} alt='Notated version of Mary Had A Little Lamb'></img>
+				<br></br>
+				<p className="text-xl text-center">Click in the piano first to activate it!</p>
+				<br></br>
+				<Piano2 />
       </div>
     </div>
   );

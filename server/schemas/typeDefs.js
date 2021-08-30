@@ -4,8 +4,11 @@ const typeDefs = gql`
     _id: ID!
     username: String
     email: String
-    password: String
-    notes: [String]!
+    notes: [Notes]!
+  }
+  type Notes {
+    _id: ID!
+    noteText: String
   }
   type Auth {
     token: ID!
@@ -14,13 +17,15 @@ const typeDefs = gql`
   type Query {
     me: User
     users: [User]!
-    user(userId: ID!): User
+    user(username: String!): User
+    notes(username: String!): [Notes]
+    note(noteId: ID!): Notes
   }
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    addNotes(userId: ID!, note: String!): User
-    removeNotes(note: String!): User
+    addNotes(noteText: String!): Notes
+    removeNotes(noteId: ID!): Notes
   }
 `;
 module.exports = typeDefs;

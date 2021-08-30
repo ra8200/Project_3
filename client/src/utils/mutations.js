@@ -25,19 +25,17 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_NOTES = gql`
-  mutation addNotes($userId: ID!, $note: String!) {
-    addNotes(userId: $userID, note: $note) {
+  mutation addNotes($noteText: String!) {
+    addNotes(noteText: $noteText) {
       _id
-      username
-      notes
+      noteText
     }
   }
 `;
 export const REMOVE_NOTES = gql`
-  mutation removeNotes($note: String!) {
-    removeNotes(note: $note)
+  mutation removeNotes($noteId: ID!) {
+    removeNotes(noteId: $noteId)
     _id
-    username
-    notes
+    noteText
   }
 `;

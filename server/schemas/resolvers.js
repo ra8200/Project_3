@@ -1,21 +1,31 @@
 const { AuthenticationError } = require("apollo-server-express");
 
-const { User } = require("../models");
+const { User, Notes } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id });
+        const userData = await User.findOne({ _id: context.user._id }).select(
+          "__v -password"
+        );
+        return userData;
       }
       throw new AuthenticationError("login please");
     },
     users: async () => {
       return User.find();
     },
-    user: async (parent, { userId }) => {
-      return User.findOne({ _id: userId });
+    user: async (parent, { username }) => {
+      return User.findOne({ username });
+    },
+    notes: async (parent, { username }) => {
+      const params = username ? { username } : {};
+      return Notes.find(params).sort({ createdAt: -1 });
+    },
+    note: async (parent, { noteId }) => {
+      return Notes.findOne({ _id: noteId });
     },
   },
   Mutation: {
@@ -29,6 +39,7 @@ const resolvers = {
         throw new AuthenticationError("Wrong Password");
       }
       const token = signToken(user);
+
       return { token, user };
     },
     addUser: async (parent, { username, email, password }) => {
@@ -36,25 +47,33 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addNotes: async (parent, { userId, note }, context) => {
+    addNotes: async (parent, { noteText }, context) => {
       if (context.user) {
-        return User.findByOneAndUpdate(
-          { _id: userId },
+        const noteEl = await Notes.create({
+          noteText,
+        });
+        await Notes.findOneAndUpdate(
+          { _id: context.user._id },
           {
-            $addToSet: { notes: note },
+            $addToSet: { notes: noteEl._id },
           },
           { new: true, runValidators: true }
         );
+        return noteEl;
       }
       throw new AuthenticationError("login please");
     },
-    removeNotes: async (parent, { note }, context) => {
+    removeNotes: async (parent, { noteId }, context) => {
       if (context.user) {
-        return User.findByOneAndUpdate(
+        const noteEl = await Notes.findOneAndDelete({
+          _id: noteId,
+        });
+        await Notes.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { notes: note } },
+          { $pull: { notes: noteEl.note } },
           { new: true }
         );
+        return noteEl;
       }
       throw new AuthenticationError("login please");
     },
