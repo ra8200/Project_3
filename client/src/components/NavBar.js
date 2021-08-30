@@ -18,7 +18,10 @@ export default function NavBar() {
           </NavLink>
           {Auth.loggedIn() ? (
             <>
-              <NavLink onClick={Auth.logout} to="/">
+              <NavLink onClick={Auth.logout} 
+              activeClassName="text-white"
+              className="inline-flex items-center py-3 px-3 my-6 text-black hover:text-black" 
+              to="/">
                 Logout
               </NavLink>
               <NavLink

@@ -32,7 +32,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="flex flex-col p-2 h-screen bg-gray-700 text-white">
+    <div className="flex flex-col p-2 h-screen bg-gray-700">
       <form onSubmit={handleFormSubmit} className="max-w-md m-auto">
         <h1 className="text-5xl text-center">RhythmR</h1>
         <p className="text-2xl text-center">Login to access the site!</p>
