@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function Tutoring() {
-  return <h1>Tutoring Service</h1>;
+  return (
+    <div className="bg-gray-700 text-white">
+      <h1>Tutoring Service</h1>
+    </div>
+  );
 }
