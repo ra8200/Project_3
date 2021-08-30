@@ -1,5 +1,23 @@
 import React from "react";
-import Piano from "../Piano";
+import Piano2 from "../Piano2";
+import * as Tone from 'tone';
+import '../../App.css';
+
+function play(note) {
+  const piano = new Tone.Sampler({
+    urls: {
+      C4: 'C4.mp3',
+      'D#4': 'Ds4.mp3',
+      'F#4': 'Fs4.mp3',
+      A4: 'A4.mp3',
+    },
+    release: 1,
+    baseUrl: 'https://tone.js.github.io/audio/salamander',
+  }).toDestination();
+  Tone.loaded().then(() => {
+    piano.triggerAttackRelease(`{note}`, 4);
+  }); 
+}
 
 export default function LessonTwo() {
   return (
@@ -78,15 +96,16 @@ export default function LessonTwo() {
         </p>
         <p className="text-xl text-center">
           EXERCISE: For this exercise, we will once again utilize the piano at
-          the bottom of the page. With the "z" and "c" keys on your keyboard,
+          the bottom of the page. With the "a" and "d" keys on your keyboard,
           which correlate to the notes "C" and "E", we will play alternating
           QUARTER NOTES and QUARTER RESTS. Ex. "C, Rest, E, Rest" for TWO
           measures. All the while, you should be counting
           "ONE...TWO...THREE...FOUR..." while tapping your foot to the beat.
         </p>
-      </div>
-      <div>
-        <Piano />
+				<br></br>
+				<p className="text-xl text-center">Click in the piano first to activate it!</p>
+				<br></br>
+        <Piano2 />
       </div>
     </div>
   );
