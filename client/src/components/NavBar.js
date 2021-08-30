@@ -16,7 +16,7 @@ export default function NavBar() {
             RhythmR
           </NavLink>
           {Auth.loggedIn() ? (
-            <>
+            <div>
               <NavLink onClick={Auth.logout} to="/">
                 Logout
               </NavLink>
@@ -27,7 +27,7 @@ export default function NavBar() {
               >
                 Profile
               </NavLink>
-            </>
+            </div>
           ) : (
             <NavLink
               to="/login"
