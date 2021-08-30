@@ -9,10 +9,7 @@ module.exports = {
 
     if (req.headers.authorization) {
       token = token.split(" ").pop().trim();
-<<<<<<< HEAD
-=======
       //console.log("does it split correctly", token);
->>>>>>> 156d3462e0f8ac0074c7d984f3e1cbc843c7567a
     }
     if (!token) {
       return req;
