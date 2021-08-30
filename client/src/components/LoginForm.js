@@ -31,7 +31,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="flex flex-col p-2 h-screen">
+    <div className="flex flex-col p-2 h-screen bg-gray-700 text-white">
       <form onSubmit={handleFormSubmit} className="max-w-md m-auto">
         <h1 className="text-5xl text-center">RhythmR</h1>
         <p className="text-2xl text-center">Login to access the site!</p>
@@ -60,7 +60,7 @@ const LoginForm = () => {
           </div>
           <div className="py-2">
             <button
-              className="w-full rounded bg-green-600 hover:bg-green-800 font-bold py-2 px-4 border-solid border-2 border-green-700"
+              className="w-full rounded bg-blue-600 hover:bg-blue-800 font-bold py-2 px-4 border-solid border-2 border-blue-700"
               style={{ cursor: "pointer" }}
               type="submit"
             >

@@ -5,7 +5,7 @@ import LessonMenu from "./Lessons/LessonMenu";
 
 export default function NavBar() {
   return (
-    <header className="bg-green-600">
+    <header className="bg-pink-400">
       <div className="container mx-auto flex justify-between">
         <nav className="flex">
           <NavLink
@@ -33,7 +33,7 @@ export default function NavBar() {
             <NavLink
               to="/login"
               className="inline-flex items-center py-3 px-3 my-6 rounded text-black hover:text-black"
-              activeClassName="bg-green-800"
+              activeClassName="bg-blue-800"
             >
               Login
             </NavLink>
@@ -42,7 +42,7 @@ export default function NavBar() {
           <NavLink
             to="/signup"
             className="inline-flex items-center py-3 px-3 my-6 rounded text-black hover:text-black"
-            activeClassName="bg-green-800"
+            activeClassName="bg-blue-800"
           >
             Sign Up
           </NavLink>
@@ -50,15 +50,15 @@ export default function NavBar() {
           <NavLink
             to="/tutoring"
             className="inline-flex items-center py-3 px-3 my-6 rounded text-black hover:text-black"
-            activeClassName="bg-green-800"
+            activeClassName="bg-blue-800"
           >
             Tutoring
           </NavLink>
           <div
             className="inline-flex items-center py-3 px-3 my-6 rounded text-black hover:text-black"
-            activeClassName="bg-green-800">
-            <LessonMenu 
-             className='inline-flex items-center top-2 py-3 px-3 my-6 z-10' />
+            activeClassName="bg-blue-800"
+          >
+            <LessonMenu className="inline-flex items-center top-2 py-3 px-3 my-6 z-10" />
           </div>
         </nav>
       </div>
