@@ -9,7 +9,8 @@ export default function LessonOne() {
   return (
     <div className='relative flex justify-center min-h-screen pt-12 lg:64 px-8'>
       <div>
-        <h1 className='text-6xl text-white font-bold styleMe leading-none lg:leading-snug home-name'>Types of Notes: Whole, Half, and Quarter</h1>
+        <h1 className='text-6xl font-bold styleMe leading-none lg:leading-snug home-name'>Types of Notes: Whole, Half, and Quarter</h1>
+        <br></br>
         <p className='text-xl text-center'>
           As we previously discussed, measures are divided into notes and rests.
           There are several different types of notes and each has a different
@@ -20,8 +21,9 @@ export default function LessonOne() {
           As we also discussed, in common time each measure has 4 beats. Go
           ahead and tap your foot FOUR times at a steady pace.
         </p>
+        <br></br>
         <h2 className='text-4xl font-bold styleMe leading-none'>Whole Notes</h2>
-        <img src="https://e7.pngegg.com/pngimages/909/793/png-clipart-whole-note-musical-note-eighth-note-rest-quarter-note-musical-notes-logo-monochrome.png" alt="A Single Whole Note"></img>
+        <img className='h-48' src="https://e7.pngegg.com/pngimages/909/793/png-clipart-whole-note-musical-note-eighth-note-rest-quarter-note-musical-notes-logo-monochrome.png" alt="A Single Whole Note"></img>
         <p className='text-xl text-center'>
           A WHOLE NOTE is a note that lasts for FOUR beats. Therefore, a WHOLE
           NOTE takes up a WHOLE measure in common time.
@@ -33,8 +35,9 @@ export default function LessonOne() {
         </p>
         <button className='w-full rounded bg-green-600 hover:bg-green-800 font-bold py-2 px-4 border-solid border-2 border-green-700' style={{ cursor: 'pointer '}} onClick={() => {sine.start(now) 
           sine.stop(now+4)}}>Play a Whole Note</button>
+        <br></br>
         <h2 className='text-4xl font-bold styleMe leading-none'>Half Notes</h2>
-        <img src="https://www.seekpng.com/png/detail/125-1252686_beths-music-notes-half-note-transparent-background.png" alt="A Single Half Note"></img>
+        <img className='h-48' src="https://www.seekpng.com/png/detail/125-1252686_beths-music-notes-half-note-transparent-background.png" alt="A Single Half Note"></img>
         <p className='text-xl text-center'>
           As you may have guessed, a HALF NOTE is equal to one HALF of a WHOLE
           NOTE. This means each HALF NOTE gets TWO BEATS. Therefore two HALF
@@ -49,8 +52,9 @@ export default function LessonOne() {
         </p>
         <button className='w-full rounded bg-green-600 hover:bg-green-800 font-bold py-2 px-4 border-solid border-2 border-green-700' style={{ cursor: 'pointer '}} onClick={() => {sine.start(now) 
           sine.stop(now+2)}}>Play a Half Note</button>
+        <br></br>
         <h2 className='text-4xl font-bold styleMe leading-none'>Quarter Notes</h2>
-        <img src="https://e7.pngegg.com/pngimages/552/896/png-clipart-quarter-note-musical-note-stem-rest-eighth-note-quarter-note-musical-notation-half-note.png" alt="A Single Quarter Note"></img>
+        <img className='h-48' src="https://e7.pngegg.com/pngimages/552/896/png-clipart-quarter-note-musical-note-stem-rest-eighth-note-quarter-note-musical-notation-half-note.png" alt="A Single Quarter Note"></img>
         <p className='text-xl text-center'>
           A QUARTER NOTE is equal to one QUARTER of a WHOLE NOTE. Think of it
           like four QUARTERS equals one WHOLE dollar. Therefore, there are FOUR

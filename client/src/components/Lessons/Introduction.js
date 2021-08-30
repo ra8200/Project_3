@@ -2,9 +2,10 @@ import React from "react";
 
 export default function Introduction() {
   return (
-    <div className='relative flex justify-center min-h-screen pt-12 lg:64 px-8'>
+    <div className='relative flex justify-center min-h-screen pt-12 lg:64 px-8 z-0'>
       <div>
-        <h1 className='text-6xl text-white font-bold styleMe leading-none lg:leading-snug home-name'>Introduction to Rhythm</h1>
+        <h1 className='text-6xl font-bold styleMe leading-none lg:leading-snug home-name'>Introduction to Rhythm</h1>
+        <br></br>
         <h2 className='text-4xl font-bold styleMe leading-none'>What is RHYTHM?</h2>
         <p className='text-xl text-center'>
           RHYTHM is an emphasis on a beat or pulse in a regular pattern. This is
@@ -15,6 +16,7 @@ export default function Introduction() {
           Like a clock that ticks regularly, RHYTHM is the combination of both
           sounds and silences at a steady pulse and movement.
         </p>
+        <br></br>
         <h2 className='text-4xl font-bold styleMe leading-none'>Why learn Rhythm? Can't we just Sing-a-long?</h2>
         <p className='text-xl text-center'>
           Rhythm allows us to understand the division of beats. This is what
@@ -28,6 +30,7 @@ export default function Introduction() {
           In the first couple of lessons, we will go over simple notes and
           rests.
         </p>
+        <br></br>
         <h2 className='text-4xl font-bold styleMe leading-none'>How to we measure TIME?</h2>
         <p className='text-xl text-center'>
           TIME, in music, is shown by placing notes in small containers, called
