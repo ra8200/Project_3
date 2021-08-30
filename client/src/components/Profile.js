@@ -21,12 +21,6 @@ const Profile = () => {
   return (
     <div className="relative flex justify-center min-h-screen pt-12 lg:64 px-8">
       <div>
-        <Piano />
-      </div>
-      <div>
-        <Toolbox />
-      </div>
-      <div>
         <NotesList notes={user.notes} isLoggedInUser={true} />
         <div>
           <NoteForm userId={user._id} />
