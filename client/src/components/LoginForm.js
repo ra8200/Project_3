@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import Input from "@material-tailwind/react/Input";
 import { useMutation } from "@apollo/client";
 
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
-import image from "../rhythmrBg.jpg";
 
 const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
