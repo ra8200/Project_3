@@ -16,10 +16,10 @@ const NotesList = ({ notes, isLoggedInUser = false }) => {
       }
     },
   });
-  const handleRemoveNotes = async (note) => {
+  const handleRemoveNotes = async (notes) => {
     try {
       const { data } = await removeNotes({
-        variables: { note },
+        variables: { notes },
       });
     } catch (err) {
       console.error(err);
