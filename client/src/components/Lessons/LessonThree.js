@@ -1,5 +1,6 @@
 import React from "react";
 import Piano from "../Piano";
+import LessonThreePart1 from './LessonThreePart1.png';
 
 export default function LessonThree() {
   return (
@@ -27,6 +28,7 @@ export default function LessonThree() {
         </p>
         <p className='text-xl text-center'>In the third measure we will sing "ONE..TWO..THREE..FOUR.."</p>
         <p className='text-xl text-center'>Remember to tap your foot as you go along!</p>
+				<img className='w-auto h-auto' src={LessonThreePart1} alt='Notated version of the above described music'></img>
 				<br></br>
         <h2 className='text-4xl font-bold styleMe leading-none'>SPOTLIGHT FOCUS!</h2>
         <p className='text-xl text-center'>
@@ -39,7 +41,7 @@ export default function LessonThree() {
         </p>
       </div>
       <div>
-        <image src="/" />
+        <img src="/" alt='/'></img>
       </div>
       <div>
         <Piano />
