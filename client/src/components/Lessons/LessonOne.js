@@ -117,7 +117,7 @@ export default function LessonOne() {
           of your foot at this point.
         </p>
         <p className="text-xl text-center">
-          EXERCISE: Ready to take this to the next level? With the "Z" key on
+          EXERCISE: Ready to take this to the next level? With the "a" key on
           your keyboard, which corresponds to the note "C" on the piano below,
           tap your foot and play the note FOUR times in a row, while counting
           ONE...TWO...THREE...FOUR. Experiment with different notes on the piano
