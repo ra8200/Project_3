@@ -65,7 +65,7 @@ const SignUp = () => {
               className="form-input border rounded py-2 px-3 w-full focus:outline-one focus:shadow-outline"
               placeholder="password"
               name="password"
-              type="text"
+              type="password"
               value={userFormData.password}
               onChange={handleInputChange}
             />
