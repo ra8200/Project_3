@@ -135,6 +135,8 @@ export default function LessonOne() {
           Play a Quarter Note
         </button>
         <br></br>
+        <p className="text-xl text-center">Click in the piano first to activate it!</p>
+				<br></br>
         <Piano2 />
       </div>
     </div>
