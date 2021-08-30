@@ -23,7 +23,7 @@ export default function NavBar() {
               <NavLink
                 to="/profile"
                 className="inline-flex items-center py-3 px-3 my-6 rounded text-black hover:text-black"
-                activeClassName="bg-blue-800"
+                activeClassName="bg-green-800"
               >
                 Profile
               </NavLink>
