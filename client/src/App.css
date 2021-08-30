@@ -37,6 +37,11 @@
   }
 }
 
+/* piano styling */
+.piano-box {
+  display: none;
+}
+
 .piano {
   display: flex;
   flex-direction: row;
@@ -84,6 +89,17 @@
   color: white;
 }
 
+/* toolbox styling */
 .toolbox {
   /* padding: 20px; */
+  background-color: white;
+  width: 50rem;
+}
+
+.notes {
+  /* notes style */
+}
+
+.rests {
+  /* rests style */
 }
