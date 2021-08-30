@@ -1,13 +1,10 @@
 import React from "react";
 import Piano2 from "../Piano2";
-import playNote from '../Piano2';
 import * as Tone from 'tone';
 import '../../App.css';
 
 const sine = new Tone.Oscillator(220, "sine").toMaster();
 const now = Tone.now();
-
-window.addEventListener('keydown', playNote);
 
 function play(note) {
   const piano = new Tone.Sampler({
@@ -137,8 +134,7 @@ export default function LessonOne() {
         >
           Play a Quarter Note
         </button>
-      </div>
-      <div>
+        <br></br>
         <Piano2 />
       </div>
     </div>

@@ -66,43 +66,43 @@ export function playC5() {
 }
 
 export function playNote(event) {
-	if (event.keyCode === 65) {
+	if (event.key === 'a') {
 		playC4();
 	}
-	if (event.keyCode === 87) {
+	if (event.key === 'w') {
 		playDb4();
 	}
-	if (event.keyCode === 83) {
+	if (event.key === 's') {
 		playD4();
 	}
-	if (event.keyCode === 69) {
+	if (event.key === 'e') {
 		playEb4();
 	}
-	if (event.keyCode === 68) {
+	if (event.key === 'd') {
 		playE4();
 	}
-	if (event.keyCode === 70) {
+	if (event.key === 'f') {
 		playF4();
 	}
-	if (event.keyCode === 84) {
+	if (event.key === 't') {
 		playGb4();
 	}
-	if (event.keyCode === 71) {
+	if (event.key === 'g') {
 		playG4();
 	}
-	if (event.keyCode === 89) {
+	if (event.key === 'y') {
 		playAb4();
 	}
-	if (event.keyCode === 72) {
+	if (event.key === 'h') {
 		playA4();
 	}
-	if (event.keyCode === 85) {
+	if (event.key === 'u') {
 		playBb4();
 	}
-	if (event.keyCode === 74) {
+	if (event.key === 'j') {
 		playB4();
 	}
-	if (event.keyCode === 75) {
+	if (event.key === 'k') {
 		playC5();
 	}
 }
@@ -110,19 +110,19 @@ export function playNote(event) {
 export default function Piano2() {
 	return(
 		<div className='piano'>
-        <div className='white-key' onClick={playC4}>A</div>
-        <div className='black-key' onClick={playDb4}>W</div>
-        <div className='white-key' onClick={playD4}>S</div>
-        <div className='black-key' onClick={playEb4}>E</div>
-        <div className='white-key' onClick={playE4}>D</div>
-        <div className='white-key' onClick={playF4}>F</div>
-        <div className='black-key' onClick={playGb4}>T</div>
-        <div className='white-key' onClick={playG4}>G</div>
-        <div className='black-key' onClick={playAb4}>Y</div>
-        <div className='white-key' onClick={playA4}>H</div>
-        <div className='black-key' onClick={playBb4}>U</div>
-        <div className='white-key' onClick={playB4}>J</div>
-        <div className='white-key' onClick={playC5}>K</div>
+        <div className='white-key' onClick={playC4} onKeyPress={playNote} tabIndex='0'>A</div>
+        <div className='black-key' onClick={playDb4} onKeyPress={playNote} tabIndex='0'>W</div>
+        <div className='white-key' onClick={playD4} onKeyPress={playNote} tabIndex='0'>S</div>
+        <div className='black-key' onClick={playEb4} onKeyPress={playNote} tabIndex='0'>E</div>
+        <div className='white-key' onClick={playE4} onKeyPress={playNote} tabIndex='0'>D</div>
+        <div className='white-key' onClick={playF4} onKeyPress={playNote} tabIndex='0'>F</div>
+        <div className='black-key' onClick={playGb4} onKeyPress={playNote} tabIndex='0'>T</div>
+        <div className='white-key' onClick={playG4} onKeyPress={playNote} tabIndex='0'>G</div>
+        <div className='black-key' onClick={playAb4} onKeyPress={playNote} tabIndex='0'>Y</div>
+        <div className='white-key' onClick={playA4} onKeyPress={playNote} tabIndex='0'>H</div>
+        <div className='black-key' onClick={playBb4} onKeyPress={playNote} tabIndex='0'>U</div>
+        <div className='white-key' onClick={playB4} onKeyPress={playNote} tabIndex='0'>J</div>
+        <div className='white-key' onClick={playC5} onKeyPress={playNote} tabIndex='0'>K</div>
       </div>
-	)
+	);
 }

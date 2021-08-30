@@ -1,10 +1,7 @@
 import React from "react";
 import Piano2 from "../Piano2";
-import playNote from '../Piano2';
 import * as Tone from 'tone';
 import '../../App.css';
-
-window.addEventListener('keydown', playNote);
 
 function play(note) {
   const piano = new Tone.Sampler({
@@ -99,7 +96,7 @@ export default function LessonTwo() {
         </p>
         <p className="text-xl text-center">
           EXERCISE: For this exercise, we will once again utilize the piano at
-          the bottom of the page. With the "z" and "c" keys on your keyboard,
+          the bottom of the page. With the "a" and "d" keys on your keyboard,
           which correlate to the notes "C" and "E", we will play alternating
           QUARTER NOTES and QUARTER RESTS. Ex. "C, Rest, E, Rest" for TWO
           measures. All the while, you should be counting

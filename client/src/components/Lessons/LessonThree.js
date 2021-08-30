@@ -1,12 +1,8 @@
 import React from "react";
 import Piano2 from "../Piano2";
-import LessonThreePart1 from './LessonThreePart1.png';
 import Mary from './Mary.JPG';
-import playNote from '../Piano2';
 import * as Tone from 'tone';
 import '../../App.css';
-
-window.addEventListener('keydown', playNote);
 
 function play(note) {
   const piano = new Tone.Sampler({
@@ -73,10 +69,11 @@ export default function LessonThree() {
         <p className="text-xl text-center">
           Remember to tap your feet while you play, and try to count along with
           each rhythm.
-          <Piano2 />
         </p>
 				<br></br>
 				<img className='h-auto w-full' src={Mary} alt='Notated version of Mary Had A Little Lamb'></img>
+				<br></br>
+				<Piano2 />
       </div>
     </div>
   );
