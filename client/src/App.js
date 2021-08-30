@@ -48,8 +48,8 @@ function App() {
           <Route component={Profile} path="/profile" />
           <Route component={Tutoring} path="/tutoring" />
           <Route component={Introduction} path='/introduction' />
-          <Route component={LessonOne} path='lessonone' />
-          <Route component={LessonTwo} path = 'lessontwo' />
+          <Route component={LessonOne} path='/lessonone' />
+          <Route component={LessonTwo} path = '/lessontwo' />
           <Route component={LessonThree} path='/lessonthree' />
         </Switch>
       </Router>
