@@ -35,7 +35,7 @@ export default function LessonThree() {
         </p>
       </div>
       <div>
-        <image src="/" />
+        <image src="/Mary.JPG" />
       </div>
       <div>
         <Piano />
