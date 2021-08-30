@@ -4,23 +4,23 @@ const bcrypt = require("bcrypt");
 const userSchema = new Schema({
   username: {
     type: String,
-    required: true,
+    // required: true,
     unique: true,
   },
   email: {
     type: String,
-    required: true,
+    // required: true,
     unique: true,
     match: [/.+@.+\..+/, "Must use a valid email address"],
   },
   password: {
     type: String,
-    required: true,
+    // required: true,
   },
   notes: [
     {
-      type: String,
-      trim: true,
+      type: Schema.Types.ObjectId,
+      ref: "Notes",
     },
   ],
 });
@@ -28,6 +28,7 @@ const userSchema = new Schema({
 userSchema.pre("save", async function (next) {
   if (this.isNew || this.isModified("password")) {
     const saltRounds = 10;
+    console.log("serverend", this.password);
     this.password = await bcrypt.hash(this.password, saltRounds);
   }
   next();
