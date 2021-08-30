@@ -61,7 +61,7 @@ class Piano extends Component {
     });
 
     return (
-      <div>
+      <div className="piano-box">
         <div className="piano-title">Piano</div>
         <div className="piano">{keys}</div>
         <div>{audioFiles}</div>
