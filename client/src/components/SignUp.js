@@ -32,11 +32,11 @@ const SignUp = () => {
     });
   };
   return (
-    <div className="flex flex-col p-2 h-screen">
+    <div className="flex flex-col p-2 h-screen bg-gray-700 text-white">
       <form onSubmit={handleFormSubmit} className="max-w-md m-auto">
         <h1 className="text-5xl text-center">RhythmR</h1>
         <p className="text-2xl text-center">Sign Up to access the site!</p>
-        <div className="border p-5 my-5 rounded shadow-lg-green">
+        <div className="border p-5 my-5 rounded shadow-lg-blue">
           <div>
             <label className="block mb-2">Username</label>
             <input
@@ -65,14 +65,14 @@ const SignUp = () => {
               className="form-input border rounded py-2 px-3 w-full focus:outline-one focus:shadow-outline"
               placeholder="password"
               name="password"
-              type="text"
+              type="password"
               value={userFormData.password}
               onChange={handleInputChange}
             />
           </div>
           <div className="py-2">
             <button
-              className="w-full rounded bg-green-600 hover:bg-green-800 font-bold py-2 px-4 border-solid border-2 border-green-700"
+              className="w-full rounded bg-blue-600 hover:bg-blue-800 font-bold py-2 px-4 border-solid border-2 border-blue-700"
               style={{ cursor: "pointer" }}
               type="submit"
             >
