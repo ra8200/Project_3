@@ -21,6 +21,7 @@ export default function LessonOne() {
           ahead and tap your foot FOUR times at a steady pace.
         </p>
         <h2>Whole Notes</h2>
+        <img src="https://e7.pngegg.com/pngimages/909/793/png-clipart-whole-note-musical-note-eighth-note-rest-quarter-note-musical-notes-logo-monochrome.png" alt="A Single Whole Note"></img>
         <p>
           A WHOLE NOTE is a note that lasts for FOUR beats. Therefore, a WHOLE
           NOTE takes up a WHOLE measure in common time.
@@ -33,6 +34,7 @@ export default function LessonOne() {
         <button onClick={() => {sine.start(now) 
           sine.stop(now+4)}}>Play a Whole Note</button>
         <h2>Half Notes</h2>
+        <img src="https://www.seekpng.com/png/detail/125-1252686_beths-music-notes-half-note-transparent-background.png" alt="A Single Half Note"></img>
         <p>
           As you may have guessed, a HALF NOTE is equal to one HALF of a WHOLE
           NOTE. This means each HALF NOTE gets TWO BEATS. Therefore two HALF
@@ -48,6 +50,7 @@ export default function LessonOne() {
         <button onClick={() => {sine.start(now) 
           sine.stop(now+2)}}>Play a Half Note</button>
         <h2>Quarter Notes</h2>
+        <img src="https://e7.pngegg.com/pngimages/552/896/png-clipart-quarter-note-musical-note-stem-rest-eighth-note-quarter-note-musical-notation-half-note.png" alt="A Single Quarter Note"></img>
         <p>
           A QUARTER NOTE is equal to one QUARTER of a WHOLE NOTE. Think of it
           like four QUARTERS equals one WHOLE dollar. Therefore, there are FOUR
