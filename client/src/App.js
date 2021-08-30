@@ -3,7 +3,9 @@ import Home from "./components/Home";
 // import About from "./components/About";
 import LoginForm from "./components/LoginForm";
 import SignUp from "./components/SignUp";
+import Profile from "./components/Profile";
 // import ProfileScreen from "./components/ProfileScreen";
+import Tutoring from "./components/Tutoring";
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {
@@ -13,6 +15,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+
 const httpLink = createHttpLink({ uri: "/graphql" });
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem("id_token");
@@ -37,7 +40,8 @@ function App() {
           {/* <Route component={About} path="/about" /> */}
           <Route component={LoginForm} path="/login" />
           <Route component={SignUp} path="/signup" />
-          {/* <Route component={ProfileScreen} path="/profile" /> */}
+          <Route component={Profile} path="/profile" />
+          <Route component={Tutoring} path="/tutoring" />
         </Switch>
       </Router>
     </ApolloProvider>

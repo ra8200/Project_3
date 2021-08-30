@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Input from "@material-tailwind/react/Input";
 import { useMutation } from "@apollo/client";
-import { loginUser } from "../utils/API";
+
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
+import image from "../rhythmrBg.jpg";
 
 const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
@@ -33,36 +34,45 @@ const LoginForm = () => {
   };
 
   return (
-    <main>
-      <h1>Login</h1>
-      <div>
-        <form onSubmit={handleFormSubmit}>
-          <input
-            className="form-input"
-            placeholder="email"
-            name="email"
-            type="email"
-            value={userFormData.email}
-            onChange={handleInputChange}
-          />
-          <input
-            className="form-input"
-            placeholder="password"
-            name="password"
-            type="password"
-            value={userFormData.password}
-            onChange={handleInputChange}
-          />
-          <button
-            className="btn btn-block btn-primary"
-            style={{ cursor: "pointer" }}
-            type="submit"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
-    </main>
+    <div className="flex flex-col p-2 h-screen">
+      <form onSubmit={handleFormSubmit} className="max-w-md m-auto">
+        <h1 className="text-5xl text-center">RhythmR</h1>
+        <p className="text-2xl text-center">Login to access the site!</p>
+        <div className="border p-5 my-5 rounded shadow-lg-blue">
+          <div>
+            <label className="block mb-2">Email</label>
+            <input
+              className="form-input border rounded py-2 px-3 w-full focus:outline-one focus:shadow-outline"
+              placeholder="email"
+              name="email"
+              type="email"
+              value={userFormData.email}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="py-2">
+            <label className="block mb-2">Password</label>
+            <input
+              className="form-input border rounded py-2 px-3 w-full focus:outline-one focus:shadow-outline"
+              placeholder="password"
+              name="password"
+              type="password"
+              value={userFormData.password}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="py-2">
+            <button
+              className="w-full rounded bg-green-600 hover:bg-green-800 font-bold py-2 px-4 border-solid border-2 border-green-700"
+              style={{ cursor: "pointer" }}
+              type="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
   );
 };
 

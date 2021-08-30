@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import Auth from "../utils/auth";
+
 export default function NavBar() {
   return (
     <header className="bg-green-600">
@@ -15,14 +16,23 @@ export default function NavBar() {
             RhythmR
           </NavLink>
           {Auth.loggedIn() ? (
-            <NavLink onClick={Auth.logout} to="/">
-              Logout
-            </NavLink>
+            <>
+              <NavLink onClick={Auth.logout} to="/">
+                Logout
+              </NavLink>
+              <NavLink
+                to="/profile"
+                className="inline-flex items-center py-3 px-3 my-6 rounded text-black hover:text-black"
+                activeClassName="bg-blue-800"
+              >
+                Profile
+              </NavLink>
+            </>
           ) : (
             <NavLink
               to="/login"
               className="inline-flex items-center py-3 px-3 my-6 rounded text-black hover:text-black"
-              activeClassName="bg-blue-800"
+              activeClassName="bg-green-800"
             >
               Login
             </NavLink>
@@ -31,9 +41,17 @@ export default function NavBar() {
           <NavLink
             to="/signup"
             className="inline-flex items-center py-3 px-3 my-6 rounded text-black hover:text-black"
-            activeClassName="bg-blue-800"
+            activeClassName="bg-green-800"
           >
             Sign Up
+          </NavLink>
+
+          <NavLink
+            to="/tutoring"
+            className="inline-flex items-center py-3 px-3 my-6 rounded text-black hover:text-black"
+            activeClassName="bg-green-800"
+          >
+            Tutoring
           </NavLink>
         </nav>
       </div>

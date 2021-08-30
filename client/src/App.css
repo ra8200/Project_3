@@ -36,3 +36,70 @@
     transform: rotate(360deg);
   }
 }
+
+/* piano styling */
+.piano-box {
+  display: none;
+}
+
+.piano {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid rgba(5, 150, 105);
+}
+
+.key {
+  background-color: white;
+  height: 300px;
+  width: 60px;
+  border: 2px solid black;
+}
+
+.key.flat {
+  position: relative;
+  background-color: black;
+  margin-left: -17px;
+  margin-right: -17px;
+  height: 200px;
+  width: 30px;
+  z-index: 2;
+}
+
+.key.pressed,
+.key.flat.pressed {
+  background-color: rgba(5, 150, 105);
+}
+
+.key-text {
+  position: relative;
+  color: black;
+  font-weight: 600;
+  font-size: 36px;
+  margin-top: 240px;
+  pointer-events: none;
+}
+
+.piano-title {
+  color: white;
+  font-weight: 500;
+  font-size: 42px;
+}
+
+.piano-instructions {
+  color: white;
+}
+
+/* toolbox styling */
+.toolbox {
+  /* padding: 20px; */
+  background-color: white;
+  width: 50rem;
+}
+
+.notes {
+  /* notes style */
+}
+
+.rests {
+  /* rests style */
+}
