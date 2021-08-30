@@ -1,5 +1,26 @@
 import React from "react";
-import Piano from "../Piano";
+import Piano2 from "../Piano2";
+import playNote from '../Piano2';
+import * as Tone from 'tone';
+import '../../App.css';
+
+window.addEventListener('keydown', playNote);
+
+function play(note) {
+  const piano = new Tone.Sampler({
+    urls: {
+      C4: 'C4.mp3',
+      'D#4': 'Ds4.mp3',
+      'F#4': 'Fs4.mp3',
+      A4: 'A4.mp3',
+    },
+    release: 1,
+    baseUrl: 'https://tone.js.github.io/audio/salamander',
+  }).toDestination();
+  Tone.loaded().then(() => {
+    piano.triggerAttackRelease(`{note}`, 4);
+  }); 
+}
 
 export default function LessonTwo() {
   return (
@@ -66,9 +87,8 @@ export default function LessonTwo() {
           measures. All the while, you should be counting
           "ONE...TWO...THREE...FOUR..." while tapping your foot to the beat.
         </p>
-      </div>
-      <div>
-        <Piano />
+				<br></br>
+        <Piano2 />
       </div>
     </div>
   );
