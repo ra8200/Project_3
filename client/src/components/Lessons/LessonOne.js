@@ -1,5 +1,9 @@
 import React from "react";
 import Piano from "../Piano";
+import * as Tone from 'tone';
+
+const sine = new Tone.Oscillator(220, 'sine').toMaster();
+const now = Tone.now();
 
 export default function LessonOne() {
   return (
@@ -24,8 +28,10 @@ export default function LessonOne() {
         <p>
           EXERCISE: Go ahead and sing the word "ONE" while tapping your foot for
           FOUR beats. Don't worry about sounding silly, as this is a necessary
-          task in order to understand how music works.
+          task in order to understand how music works. Play along with the example at 60 beats per minute!
         </p>
+        <button onClick={() => {sine.start(now) 
+          sine.stop(now+4)}}>Play a Whole Note</button>
         <h2>Half Notes</h2>
         <p>
           As you may have guessed, a HALF NOTE is equal to one HALF of a WHOLE
@@ -37,8 +43,10 @@ export default function LessonOne() {
           start with the word "ONE" for TWO taps of your foot, and then we will
           sing "THREE" for two taps of your foot. This is because beats "TWO"
           and "FOUR" are not yet present with our current note values. Don't
-          worry, this will make much more sense soon enough.
+          worry, this will make much more sense soon enough. Play along with the example at 60 beats per minute!
         </p>
+        <button onClick={() => {sine.start(now) 
+          sine.stop(now+2)}}>Play a Half Note</button>
         <h2>Quarter Notes</h2>
         <p>
           A QUARTER NOTE is equal to one QUARTER of a WHOLE NOTE. Think of it
@@ -53,8 +61,10 @@ export default function LessonOne() {
           tap your foot and play the note FOUR times in a row, while counting
           ONE...TWO...THREE...FOUR. Experiment with different notes on the piano
           while counting to four. Be sure to stay consistent while tapping your
-          foot and counting!
+          foot and counting! Play along with the example at 60 beats per minute!
         </p>
+        <button onClick={() => {sine.start(now) 
+          sine.stop(now+1)}}>Play a Quarter Note</button>
       </div>
       <div>
         <Piano />
