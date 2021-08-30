@@ -18,9 +18,6 @@ export default function Home() {
             Welcome to RhythmR
           </h1>
         </div>
-        <div>
-          <LessonMenu />
-        </div>
       </section>
     </main>
   );
