@@ -17,16 +17,13 @@ export default function NavBar() {
             RhythmR
           </NavLink>
           {Auth.loggedIn() ? (
-<<<<<<< HEAD
             <div>
-              <NavLink onClick={Auth.logout} to="/">
-=======
-            <>
-              <NavLink onClick={Auth.logout} 
-              activeClassName="text-white"
-              className="inline-flex items-center py-3 px-3 my-6 text-black hover:text-black" 
-              to="/">
->>>>>>> 74b14db537ee56a48ac4dbe0fc73f7197ca46fc4
+              <NavLink
+                onClick={Auth.logout}
+                activeClassName="text-white"
+                className="inline-flex items-center py-3 px-3 my-6 text-black hover:text-black"
+                to="/"
+              >
                 Logout
               </NavLink>
               <NavLink
