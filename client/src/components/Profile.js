@@ -11,15 +11,9 @@ const Profile = () => {
   const { loading, data } = useQuery(QUERY_GET_ME);
   const userData = data?.me || data?.user || {};
 
-<<<<<<< HEAD
   return (
     <div className="relative flex justify-center min-h-screen pt-12 lg:64 px-8">
-=======
-  if (Auth.loggedIn()) {
-    console.log("log");
-    return (
->>>>>>> 156d3462e0f8ac0074c7d984f3e1cbc843c7567a
-      <div>
+      <div className="relative flex justify-center min-h-screen pt-12 lg:64 px-8 bg-gray-700 text-white">
         <div>
           <NotesList notes={userData.notes} isLoggedInUser={true} />
           <div>
@@ -31,8 +25,9 @@ const Profile = () => {
           <Piano2 />
         </div>
       </div>
-    );
-  }
-};
+    </div>  
+  );
+ }
+
 
 export default Profile;
