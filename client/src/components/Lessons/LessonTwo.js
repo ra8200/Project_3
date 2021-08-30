@@ -1,7 +1,11 @@
-import React, { Component } from 'react';
+import React from "react";
 
-class LessonTwo extends Component = {
-
+export default function LessonTwo() {
+  return (
+    <div>
+      <div>
+        <h1>Types of Rests: Whole Rest, Half Rest, and Quarter Rest</h1>
+      </div>
+    </div>
+  );
 }
-
-export default LessonTwo;
