@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
-class LessonThree extends Component = {
+// class LessonThree extends Component = {
 
-}
+// }
 
-export default LessonThree;
+// export default LessonThree;

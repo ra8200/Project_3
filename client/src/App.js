@@ -1,12 +1,5 @@
 import React from "react";
-import Home from "./components/Home";
-// import About from "./components/About";
-import LoginForm from "./components/LoginForm";
-import SignUp from "./components/SignUp";
-import Profile from "./components/Profile";
-// import ProfileScreen from "./components/ProfileScreen";
-import Tutoring from "./components/Tutoring";
-import NavBar from "./components/NavBar";
+import Container from './components/container';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {
   ApolloClient,
@@ -34,15 +27,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <NavBar />
-        <Switch>
-          <Route component={Home} path="/" exact />
-          {/* <Route component={About} path="/about" /> */}
-          <Route component={LoginForm} path="/login" />
-          <Route component={SignUp} path="/signup" />
-          <Route component={Profile} path="/profile" />
-          <Route component={Tutoring} path="/tutoring" />
-        </Switch>
+        <div className='App'>
+          <Container />
+        </div>
       </Router>
     </ApolloProvider>
   );
