@@ -1,6 +1,7 @@
 import React from "react";
 import Piano from "../Piano";
 import LessonThreePart1 from './LessonThreePart1.png';
+import Mary from './Mary.JPG';
 
 export default function LessonThree() {
   return (
@@ -28,6 +29,7 @@ export default function LessonThree() {
         </p>
         <p className='text-xl text-center'>In the third measure we will sing "ONE..TWO..THREE..FOUR.."</p>
         <p className='text-xl text-center'>Remember to tap your foot as you go along!</p>
+				<br></br>
 				<img className='w-auto h-auto' src={LessonThreePart1} alt='Notated version of the above described music'></img>
 				<br></br>
         <h2 className='text-4xl font-bold styleMe leading-none'>SPOTLIGHT FOCUS!</h2>
@@ -39,9 +41,8 @@ export default function LessonThree() {
           Remember to tap your feet while you play, and try to count along with
           each rhythm.
         </p>
-      </div>
-      <div>
-        <img src="/" alt='/'></img>
+				<br></br>
+				<img className='h-auto w-full' src={Mary} alt='Notated version of Mary Had A Little Lamb'></img>
       </div>
       <div>
         <Piano />
