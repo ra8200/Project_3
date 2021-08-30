@@ -1,6 +1,7 @@
 import React from "react";
-import Piano from "../components/Piano";
-import Toolbox from "./toolbox";
+import image from "../rhythmrBg.jpg";
+// import Piano from "../components/Piano";
+// import Toolbox from "./toolbox";
 import LessonMenu from "../components/Lessons/LessonMenu";
 
 export default function Home() {
@@ -16,9 +17,6 @@ export default function Home() {
           <h1 className="text-6xl text-white font-bold styleMe leading-none lg:leading-snug home-name">
             Welcome to RhythmR
           </h1>
-        </div>
-        <div>
-          <LessonMenu />
         </div>
       </section>
     </main>

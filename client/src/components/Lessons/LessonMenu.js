@@ -26,15 +26,15 @@ export default function LessonMenu() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
           <div className="py-1">
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/"
+                  href="/Introduction"
                   className={classNames(
                     active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-sm"
+                    "block px-4 py-2 text-sm z-10"
                   )}
                 >
                   Introduction to Rhythm
@@ -44,10 +44,10 @@ export default function LessonMenu() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/"
+                  href="/LessonOne"
                   className={classNames(
                     active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-sm"
+                    "block px-4 py-2 text-sm z-10"
                   )}
                 >
                   Lesson One
@@ -57,10 +57,10 @@ export default function LessonMenu() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/"
+                  href="/LessonTwo"
                   className={classNames(
                     active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-sm"
+                    "block px-4 py-2 text-sm z-10"
                   )}
                 >
                   Lesson Two
@@ -70,10 +70,10 @@ export default function LessonMenu() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/"
+                  href="/LessonThree"
                   className={classNames(
                     active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-sm"
+                    "block px-4 py-2 text-sm z-10"
                   )}
                 >
                   Lesson Three

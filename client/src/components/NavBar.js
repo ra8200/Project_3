@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import Auth from "../utils/auth";
+import LessonMenu from "./Lessons/LessonMenu";
 
 export default function NavBar() {
   return (
@@ -53,6 +54,12 @@ export default function NavBar() {
           >
             Tutoring
           </NavLink>
+          <div
+            className="inline-flex items-center py-3 px-3 my-6 rounded text-black hover:text-black"
+            activeClassName="bg-green-800">
+            <LessonMenu 
+             className='inline-flex items-center top-2 py-3 px-3 my-6 z-10' />
+          </div>
         </nav>
       </div>
     </header>
