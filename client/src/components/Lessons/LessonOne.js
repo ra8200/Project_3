@@ -1,7 +1,7 @@
 import React from "react";
 import Piano2 from "../Piano2";
-import * as Tone from 'tone';
-import '../../App.css';
+import * as Tone from "tone";
+import "../../App.css";
 
 const sine = new Tone.Oscillator(220, "sine").toMaster();
 const now = Tone.now();
@@ -9,17 +9,17 @@ const now = Tone.now();
 function play(note) {
   const piano = new Tone.Sampler({
     urls: {
-      C4: 'C4.mp3',
-      'D#4': 'Ds4.mp3',
-      'F#4': 'Fs4.mp3',
-      A4: 'A4.mp3',
+      C4: "C4.mp3",
+      "D#4": "Ds4.mp3",
+      "F#4": "Fs4.mp3",
+      A4: "A4.mp3",
     },
     release: 1,
-    baseUrl: 'https://tone.js.github.io/audio/salamander',
+    baseUrl: "https://tone.js.github.io/audio/salamander",
   }).toDestination();
   Tone.loaded().then(() => {
     piano.triggerAttackRelease(`{note}`, 4);
-  }); 
+  });
 }
 
 export default function LessonOne() {
@@ -58,7 +58,7 @@ export default function LessonOne() {
           task in order to understand how music works. Play along with the
           example at 60 beats per minute!
         </p>
-        <button
+        {/* <button
           className="w-72 rounded bg-blue-600 hover:bg-blue-800 font-bold py-2 px-4 border-solid border-2 border-blue-700"
           style={{ cursor: "pointer " }}
           onClick={() => {
@@ -67,7 +67,7 @@ export default function LessonOne() {
           }}
         >
           Play a Whole Note
-        </button>
+        </button> */}
         <br></br>
         <h2 className="text-4xl font-bold styleMe leading-none">Half Notes</h2>
         <img
@@ -89,7 +89,7 @@ export default function LessonOne() {
           worry, this will make much more sense soon enough. Play along with the
           example at 60 beats per minute!
         </p>
-        <button
+        {/* <button
           className="w-72 rounded bg-blue-600 hover:bg-blue-800 font-bold py-2 px-4 border-solid border-2 border-blue-700"
           style={{ cursor: "pointer " }}
           onClick={() => {
@@ -98,7 +98,7 @@ export default function LessonOne() {
           }}
         >
           Play a Half Note
-        </button>
+        </button> */}
         <br></br>
         <h2 className="text-4xl font-bold styleMe leading-none">
           Quarter Notes
@@ -124,7 +124,7 @@ export default function LessonOne() {
           while counting to four. Be sure to stay consistent while tapping your
           foot and counting! Play along with the example at 60 beats per minute!
         </p>
-        <button
+        {/* <button
           className="w-72 rounded bg-blue-600 hover:bg-blue-800 font-bold py-2 px-4 border-solid border-2 border-blue-700"
           style={{ cursor: "pointer " }}
           onClick={() => {
@@ -133,10 +133,12 @@ export default function LessonOne() {
           }}
         >
           Play a Quarter Note
-        </button>
+        </button> */}
         <br></br>
-        <p className="text-xl text-center">Click in the piano first to activate it!</p>
-				<br></br>
+        <p className="text-xl text-center">
+          Click in the piano first to activate it!
+        </p>
+        <br></br>
         <Piano2 />
       </div>
     </div>
