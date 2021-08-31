@@ -1,8 +1,5 @@
 import React from "react";
 import image from "../rhythmrBg.jpg";
-// import Piano from "../components/Piano";
-// import Toolbox from "./toolbox";
-import LessonMenu from "../components/Lessons/LessonMenu";
 
 export default function Home() {
   return (
