@@ -38,10 +38,10 @@ We are seeking to develop an app that will model the process of how to properly 
 
   ### Contributors
 
-Razi Alawamleh - razi.alawamleh@gmail.com
-Austin Baxley - ausbaxley@gmail.com
-David Kim - dlm.kim617@gmail.com
-Scotty Phillips - scotty.d.phillips@gmail.com
+Razi Alawamleh - razi.alawamleh@gmail.com  
+Austin Baxley - ausbaxley@gmail.com  
+David Kim - dlm.kim617@gmail.com  
+Scotty Phillips - scotty.d.phillips@gmail.com  
 
   ### License
 
