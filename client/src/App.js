@@ -1,15 +1,11 @@
 import React from "react";
 import Home from "./components/Home";
-// import About from "./components/About";
 import LoginForm from "./components/LoginForm";
 import SignUp from "./components/SignUp";
 import Profile from "./components/Profile";
-import LessonMenu from "./components/Lessons/LessonMenu";
-import LessonOne from './components/Lessons/LessonOne';
-import LessonTwo from './components/Lessons/LessonTwo';
-import LessonThree from './components/Lessons/LessonThree';
-// import ProfileScreen from "./components/ProfileScreen";
-import Tutoring from "./components/Tutoring";
+import LessonOne from "./components/Lessons/LessonOne";
+import LessonTwo from "./components/Lessons/LessonTwo";
+import LessonThree from "./components/Lessons/LessonThree";
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {
@@ -42,15 +38,13 @@ function App() {
         <NavBar />
         <Switch>
           <Route component={Home} path="/" exact />
-          {/* <Route component={About} path="/about" /> */}
           <Route component={LoginForm} path="/login" />
           <Route component={SignUp} path="/signup" />
           <Route component={Profile} path="/profile" />
-          <Route component={Tutoring} path="/tutoring" />
-          <Route component={Introduction} path='/introduction' />
-          <Route component={LessonOne} path='/lessonone' />
-          <Route component={LessonTwo} path = '/lessontwo' />
-          <Route component={LessonThree} path='/lessonthree' />
+          <Route component={Introduction} path="/introduction" />
+          <Route component={LessonOne} path="/lessonone" />
+          <Route component={LessonTwo} path="/lessontwo" />
+          <Route component={LessonThree} path="/lessonthree" />
         </Switch>
       </Router>
     </ApolloProvider>

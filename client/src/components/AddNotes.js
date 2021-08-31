@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_NOTES } from "../utils/mutations";
 import { QUERY_GET_ME, QUERY_NOTES } from "../utils/queries";
-import { useQuery } from "@apollo/client";
+// import { useQuery } from "@apollo/client";
 import Auth from "../utils/auth";
 
 const NoteForm = () => {
