@@ -8,15 +8,15 @@ import Auth from "../utils/auth";
 import Piano2 from "./Piano2";
 
 const Profile = () => {
-  const { loading, data } = useQuery(QUERY_GET_ME);
-  const userData = data?.me || data?.user || {};
+  const data = useQuery(QUERY_GET_ME);
+  const userData = data?.notes || data?.user || {};
 
   if (Auth.loggedIn()) {
     console.log("log");
     return (
       <div>
         <div>
-          <NotesList notes={userData.notes} isLoggedInUser={true} />
+          <NotesList />
           <div>
             <NoteForm />
           </div>

@@ -5,28 +5,28 @@ import { QUERY_GET_ME, QUERY_NOTES } from "../utils/queries";
 // import { useQuery } from "@apollo/client";
 import Auth from "../utils/auth";
 
-const NoteForm = () => {
+const NoteForm = ({ noteId }) => {
   const [noteText, addNoteText] = useState("");
-  const [addNotes, { error }] = useMutation(ADD_NOTES, {
-    update(cache, { data: { addNotes } }) {
-      try {
-        const { notes } = cache.readQuery({ query: QUERY_NOTES });
-        cache.writeQuery({
-          query: QUERY_NOTES,
-          data: { notes: [addNotes, ...notes] },
-        });
-      } catch (e) {
-        console.error(e);
-      }
+  // const [addNotes, { error }] = useMutation(ADD_NOTES, {
+  //   update(cache, { data: { addNotes } }) {
+  //     try {
+  //       const { notesQ } = cache.readQuery({ query: QUERY_NOTES });
+  //       cache.writeQuery({
+  //         query: QUERY_NOTES,
+  //         data: { notesQ: [addNotes, ...notesQ] },
+  //       });
+  //     } catch (e) {
+  //       console.error(e);
+  //     }
 
-      const { me } = cache.readQuery({ query: QUERY_GET_ME });
-      cache.writeQuery({
-        query: QUERY_GET_ME,
-        data: { me: { ...me, notes: [...me.notes, addNotes] } },
-      });
-    },
-  });
-
+  //     const { meQ } = cache.readQuery({ query: QUERY_GET_ME });
+  //     cache.writeQuery({
+  //       query: QUERY_GET_ME,
+  //       data: { meQ: { ...meQ, notes: [...meQ.notes, addNotes] } },
+  //     });
+  //   },
+  // });
+  const [addNotes, { error }] = useMutation(ADD_NOTES);
   const handleSaveClick = async (event) => {
     event.preventDefault();
     try {
